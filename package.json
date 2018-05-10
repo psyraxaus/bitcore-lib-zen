@@ -81,7 +81,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/zencashofficial/bitcore-lib-zen.git"
+    "url": "https://github.com/ZencashOfficial/bitcore-lib-zen.git"
   },
   "browser": {
     "request": "browser-request"
@@ -95,7 +95,7 @@
     "lodash": "=3.10.1"
   },
   "devDependencies": {
-    "bitcore-build-zen": "zencashofficial/bitcore-build-zen",
+    "bitcore-build-zen": "ZencashOfficial/bitcore-build-zen",
     "brfs": "^1.2.0",
     "chai": "^1.10.0",
     "gulp": "^3.8.10",
