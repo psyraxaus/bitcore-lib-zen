@@ -1,3 +1,6 @@
+NOTE: This project is deprecated. Please use ZenCashJS instead. https://github.com/ZencashOfficial/zencashjs
+=======
+
 Bitcore Library
 =======
 
