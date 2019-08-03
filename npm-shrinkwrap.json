@@ -40,9 +40,9 @@
       "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz"
     },
     "lodash": {
-      "version": "4.17.12",
-      "from": "lodash@=4.17.12",
-      "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.12.tgz"
+      "version": "4.17.15",
+      "from": "lodash@=4.17.15",
+      "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.15.tgz"
     }
   }
 }
