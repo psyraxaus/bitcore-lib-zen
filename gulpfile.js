@@ -1,5 +1,4 @@
+'use strict';
 
-
-var bitcoreTasks = require('bitcore-build-zen');
-
-bitcoreTasks('lib');
+var startGulp = require('bitcore-build-zen');
+module.exports = startGulp('lib-zen');
