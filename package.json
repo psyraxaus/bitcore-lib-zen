@@ -96,9 +96,9 @@
   },
   "devDependencies": {
     "bitcore-build-zen": "ZencashOfficial/bitcore-build-zen",
-    "brfs": "^1.2.0",
-    "chai": "^1.10.0",
-    "gulp": "^3.8.10",
+    "brfs": "^2.0.1",
+    "chai": "^4.2.0",
+    "gulp": "^4.0.0",
     "sinon": "^1.13.0"
   },
   "license": "MIT"
