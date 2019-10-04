@@ -17,19 +17,19 @@ describe('Networks', function() {
 
   it('will enable/disable regtest Network', function() {
     networks.enableRegtest();
-    networks.testnet.networkMagic.should.deep.equal(new Buffer('fabfb5da', 'hex'));
-    networks.testnet.port.should.equal(18444);
+    networks.testnet.networkMagic.should.deep.equal(new Buffer('2f54cc9d', 'hex'));
+    networks.testnet.port.should.equal(19133);
     networks.testnet.dnsSeeds.should.deep.equal([]);
     networks.testnet.regtestEnabled.should.equal(true);
 
     networks.disableRegtest();
-    networks.testnet.networkMagic.should.deep.equal(new Buffer('0b110907', 'hex'));
-    networks.testnet.port.should.equal(18333);
+    networks.testnet.networkMagic.should.deep.equal(new Buffer('bff2cde6', 'hex'));
+    networks.testnet.port.should.equal(19033);
     networks.testnet.dnsSeeds.should.deep.equal([
-      'testnet-seed.bitcoin.petertodd.org',
-      'testnet-seed.bluematt.me',
-      'testnet-seed.alexykot.me',
-      'testnet-seed.bitcoin.schildbach.de'
+      'dnsseed.testnet.horizen.global',
+      'zpool2.blockoperations.com',
+      'node.scottrockcafe.com',
+      'testnet.horizen.global'
     ]);
   });
 
@@ -102,13 +102,18 @@ describe('Networks', function() {
   });
 
   it('tests only for the specified key', function() {
-    expect(networks.get(0x6f, 'pubkeyhash')).to.equal(networks.testnet);
+    expect(networks.get(0x2089, 'pubkeyhash')).to.equal(networks.livenet);
+    expect(networks.get(0x2096, 'scripthash')).to.equal(networks.livenet);
+    expect(networks.get(0x2098, 'pubkeyhash')).to.equal(networks.testnet);
+    expect(networks.get(0x2092, 'scripthash')).to.equal(networks.testnet);
     expect(networks.get(0x6f, 'privatekey')).to.equal(undefined);
   });
 
   it('can test for multiple keys', function() {
-    expect(networks.get(0x6f, ['pubkeyhash', 'scripthash'])).to.equal(networks.testnet);
-    expect(networks.get(0xc4, ['pubkeyhash', 'scripthash'])).to.equal(networks.testnet);
+    expect(networks.get(0x2089, ['pubkeyhash', 'scripthash'])).to.equal(networks.livenet);
+    expect(networks.get(0x2096, ['pubkeyhash', 'scripthash'])).to.equal(networks.livenet);
+    expect(networks.get(0x2098, ['pubkeyhash', 'scripthash'])).to.equal(networks.testnet);
+    expect(networks.get(0x2092, ['pubkeyhash', 'scripthash'])).to.equal(networks.testnet);
     expect(networks.get(0x6f, ['privatekey', 'port'])).to.equal(undefined);
   });
 
