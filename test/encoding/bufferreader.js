@@ -212,11 +212,11 @@ describe('BufferReader', function() {
       br.readUInt64LEBN().toNumber().should.equal(num);
     });
 
-    it('should return max number of satoshis', function() {
-      var maxSatoshis = 21000000 * 1e8;
-      var maxSatoshisBuffer = new Buffer('0040075af0750700', 'hex');
-      var br = new BufferReader(maxSatoshisBuffer);
-      br.readUInt64LEBN().toNumber().should.equal(maxSatoshis);
+    it('should return max number of zatoshis', function() {
+      var maxZatoshi = 21000000 * 1e8;
+      var maxZatoshiBuffer = new Buffer('0040075af0750700', 'hex');
+      var br = new BufferReader(maxZatoshiBuffer);
+      br.readUInt64LEBN().toNumber().should.equal(maxZatoshi);
     });
 
     it('should return 2^53 - 1', function() {

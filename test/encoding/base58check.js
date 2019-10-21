@@ -15,7 +15,7 @@ describe('Base58Check', function() {
   });
 
   it('can validate a serialized string', function() {
-    var address = '3J98t1WpEZ73CNmQviecrnyiWrnqRhWNLy';
+    var address = 'znnjN3uHHePC6D8EUuXo8yMe51QQegowE7V';
     Base58Check.validChecksum(address).should.equal(true);
     address = address + 'a';
     Base58Check.validChecksum(address).should.equal(false);
