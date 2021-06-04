@@ -18,9 +18,9 @@
       "resolved": "https://registry.npmjs.org/buffer-compare/-/buffer-compare-1.0.0.tgz"
     },
     "elliptic": {
-      "version": "3.0.3",
-      "from": "elliptic@=3.0.3",
-      "resolved": "https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
+      "version": "6.5.4",
+      "from": "elliptic@=6.5.4",
+      "resolved": "https://registry.npmjs.org/elliptic/-/elliptic-6.5.4.tgz",
       "dependencies": {
         "brorand": {
           "version": "1.0.5",
@@ -40,9 +40,9 @@
       "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz"
     },
     "lodash": {
-      "version": "4.17.15",
-      "from": "lodash@=4.17.15",
-      "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.15.tgz"
+      "version": "4.17.21",
+      "from": "lodash@=4.17.21",
+      "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
     }
   }
 }
