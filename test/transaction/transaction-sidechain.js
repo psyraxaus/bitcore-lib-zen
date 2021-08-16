@@ -7,9 +7,9 @@ var expect = require('chai').expect;
 var txes = require('../data_tx/tx.json');
 var index = 0;
 
-describe('#Sidechain creation', function() {
+describe('#Sidechain transactions', function() {
 
-  describe('SC_create', function() {
+  describe('SC_create/FT/VMBTR', function() {
     var index = 0;
     txes.forEach(function(ele) {
 
