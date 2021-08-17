@@ -83,7 +83,13 @@ describe('#Sidechain transactions', function() {
           //TODO
 
           //vmbtr_out
-          //TODO
+          assert.equal(sc.vmbtr_out.length,txJson.vmbtr_out.length);
+          for (var i=0; i<txJson.vmbtr_out.length;i++) {
+              assert.equal(sc.vmbtr_out[i].scid,txJson.vmbtr_out[i].scid);
+              assert.equal(tx.sc_params.vmbtr_out[i].scFee / 1e8,txJson.vmbtr_out[i].scFee);
+              assert.equal(sc.vmbtr_out[i].mcDestinationAddress,txJson.vmbtr_out[i].mcDestinationAddress.pubkeyhash);
+              assert.equal(sc.vmbtr_out[i].vScRequestData.length,txJson.vmbtr_out[i].vScRequestData.length);
+          }
 
           //serialize
           assert.equal(tx.toBuffer().toString('hex'),hexa);
