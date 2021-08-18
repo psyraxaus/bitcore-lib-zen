@@ -7,6 +7,16 @@ var expect = require('chai').expect;
 var txes = require('../data_tx/tx.json');
 var index = 0;
 
+const revert = function(pubkey) {
+    var pubkeyhash = ""
+    var i = pubkey.length-1
+    while(i>0){
+        pubkeyhash+=pubkey[i-1]+pubkey[i]
+        i=i-2
+    }
+    return pubkeyhash
+}
+
 describe('#Sidechain transactions', function() {
 
   describe('SC_create/FT/VMBTR', function() {
@@ -46,9 +56,22 @@ describe('#Sidechain transactions', function() {
           var sc = {
             vsc_ccout : scParamsObject.vsc_ccout,
             vft_ccout : scParamsObject.vft_ccout,
-            vcsw : scParamsObject.vcsw,
+            vcsw_ccin : scParamsObject.vcsw_ccin,
             vmbtr_out : scParamsObject.vmbtr_out
           };
+
+          //vcsw
+          assert.equal(sc.vcsw_ccin.length,txJson.vcsw_ccin.length);
+          for (var i=0; i<txJson.vcsw_ccin.length; i++) {
+              assert.equal(sc.vcsw_ccin[i].value / 1e8,txJson.vcsw_ccin[i].value);
+              assert.equal(sc.vcsw_ccin[i].scId,txJson.vcsw_ccin[i].scId);
+              assert.equal(sc.vcsw_ccin[i].nullifier,txJson.vcsw_ccin[i].nullifier);
+              assert.equal(sc.vcsw_ccin[i].scProof,txJson.vcsw_ccin[i].scProof);
+              assert.equal(sc.vcsw_ccin[i].actCertDataHash,txJson.vcsw_ccin[i].actCertDataHash);
+              assert.equal(sc.vcsw_ccin[i].ceasingCumScTxCommTree,txJson.vcsw_ccin[i].ceasingCumScTxCommTree);
+              assert.equal(sc.vcsw_ccin[i].redeemScript,txJson.vcsw_ccin[i].redeemScript.hex);
+              assert.equal(sc.vcsw_ccin[i].pubKeyHash,revert(txJson.vcsw_ccin[i].scriptPubKey.asm.split(" ")[2]));
+          }
 
           //vsc_ccout
           assert.equal(sc.vsc_ccout.length,txJson.vsc_ccout.length);
@@ -78,9 +101,6 @@ describe('#Sidechain transactions', function() {
             assert.equal(tx.sc_params.vft_ccout[i].satoshis / 1e8,txJson.vft_ccout[i].value);
             assert.equal(sc.vft_ccout[i].address,txJson.vft_ccout[i].address);
           }
-
-          //vcsw
-          //TODO
 
           //vmbtr_out
           assert.equal(sc.vmbtr_out.length,txJson.vmbtr_out.length);
