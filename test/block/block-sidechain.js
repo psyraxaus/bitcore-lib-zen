@@ -19,7 +19,7 @@ describe('Block with sidechain certificate', function() {
   it('should parse correct sidechain certificates', function() {
     var b = new Block(blockbuf);
     b.sidechainCertificates.length.should.equal(1);
-    b.sidechainCertificates[0].id.should.equal(expectedData.cert[0])
+    b.sidechainCertificates[0].hash.should.equal(expectedData.cert[0].txid)
   });
   
 
