@@ -239,19 +239,6 @@ describe('Block', function() {
 
   describe('#merkleRoot', function() {
 
-    it('should describe as valid merkle root', function() {
-      var x =  Block(blockbuf);
-      var valid = x.validMerkleRoot();
-      valid.should.equal(true);
-    });
-
-    it('should describe as invalid merkle root', function() {
-      var x =  Block(blockbuf);
-      x.transactions.push(new Transaction());
-      var valid = x.validMerkleRoot();
-      valid.should.equal(false);
-    });
-
     it('should get a null hash merkle root', function() {
       var x =  Block(blockbuf);
       x.transactions = []; // empty the txs
