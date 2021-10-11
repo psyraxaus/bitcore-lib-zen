@@ -1,6 +1,6 @@
 {
   "name": "bitcore-lib-zen",
-  "version": "0.13.20",
+  "version": "1.0.0",
   "description": "A pure and powerful JavaScript Zcash library.",
   "author": "BitPay <dev@bitpay.com>",
   "main": "index.js",
@@ -95,7 +95,7 @@
     "lodash": "^4.17.15"
   },
   "devDependencies": {
-    "bitcore-build-zen": "HorizenOfficial/bitcore-build-zen#v0.5.5",
+    "bitcore-build-zen": "HorizenOfficial/bitcore-build-zen",
     "brfs": "^1.2.0",
     "chai": "^1.10.0",
     "gulp": "^3.8.10",
