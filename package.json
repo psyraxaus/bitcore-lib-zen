@@ -95,7 +95,7 @@
     "lodash": "^4.17.15"
   },
   "devDependencies": {
-    "bitcore-build-zen": "HorizenOfficial/bitcore-build-zen",
+    "bitcore-build-zen": "HorizenOfficial/bitcore-build-zen#v0.5.5",
     "brfs": "^1.2.0",
     "chai": "^1.10.0",
     "gulp": "^3.8.10",
