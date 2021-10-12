@@ -5,9 +5,6 @@ A Block instance represents the information of a block in the bitcoin network. G
 // instantiate a new block instance
 var block = new Block(hexaEncodedBlock);
 
-// will verify that the corresponding block transactions match the header
-assert(block.validMerkleRoot());
-
 // blocks have several properties
 assert(block.header); // an instance of block header, more info below
 assert(block.transactions); // an array of transactions, more info below
