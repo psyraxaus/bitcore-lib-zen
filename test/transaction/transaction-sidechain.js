@@ -1,11 +1,8 @@
 "use strict";
 
-var should = require("chai").should();
 var Transaction = require ("../../lib/transaction");
 var assert = require('chai').assert;
-var expect = require('chai').expect;
 var txes = require('../data_tx/tx.json');
-var index = 0;
 
 const revert = function(pubkey) {
     var pubkeyhash = ""
@@ -90,8 +87,9 @@ describe('#Sidechain transactions', function() {
                 assert.deepEqual(sc.vsc_ccout[i].vBitVectorCertificateFieldConfig[j],txJson.vsc_ccout[i].vBitVectorCertificateFieldConfig[j]);
             }
             assert.equal(sc.vsc_ccout[i].forwardTransferScFee / 1e8,txJson.vsc_ccout[i].ftScFee);
-            assert.equal(sc.vsc_ccout[i].mainchainBackwardTransferScFee / 1e8,txJson.vsc_ccout[i].mbtrScFee);
+            assert.equal(sc.vsc_ccout[i].mainchainBackwardTransferScFee/ 1e8,txJson.vsc_ccout[i].mbtrScFee);
             assert.equal(sc.vsc_ccout[i].mbtrRequestDataLength,txJson.vsc_ccout[i].mbtrRequestDataLength);
+            assert.equal(sc.vsc_ccout[i].sidechainVersion,txJson.vsc_ccout[i].sidechainVersion);
           }
 
           //vft_ccout
