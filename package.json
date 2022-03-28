@@ -1,6 +1,6 @@
 {
   "name": "bitcore-lib-zen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A pure and powerful JavaScript Zcash library.",
   "author": "BitPay <dev@bitpay.com>",
   "main": "index.js",
