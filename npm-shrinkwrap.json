@@ -1,48 +1,29 @@
 {
-  "name": "bitcore",
-  "version": "1.0.0",
-  "dependencies": {
-    "bn.js": {
-      "version": "2.0.4",
-      "from": "bn.js@=2.0.4",
-      "resolved": "https://registry.npmjs.org/bn.js/-/bn.js-2.0.4.tgz"
-    },
-    "bs58": {
-      "version": "2.0.0",
-      "from": "bs58@=2.0.0",
-      "resolved": "https://registry.npmjs.org/bs58/-/bs58-2.0.0.tgz"
-    },
-    "buffer-compare": {
-      "version": "1.0.0",
-      "from": "buffer-compare@=1.0.0",
-      "resolved": "https://registry.npmjs.org/buffer-compare/-/buffer-compare-1.0.0.tgz"
-    },
-    "elliptic": {
-      "version": "3.0.3",
-      "from": "elliptic@=3.0.3",
-      "resolved": "https://registry.npmjs.org/elliptic/-/elliptic-3.0.3.tgz",
+  "name": "bitcore-lib-zen",
+  "version": "1.0.1",
+  "lockfileVersion": 3,
+  "requires": true,
+  "packages": {
+    "": {
+      "name": "bitcore-lib-zen",
+      "version": "1.0.1",
+      "license": "MIT",
       "dependencies": {
-        "brorand": {
-          "version": "1.0.5",
-          "from": "brorand@^1.0.1",
-          "resolved": "https://registry.npmjs.org/brorand/-/brorand-1.0.5.tgz"
-        },
-        "hash.js": {
-          "version": "1.0.3",
-          "from": "hash.js@=1.0.3",
-          "resolved": "https://registry.npmjs.org/hash.js/-/hash.js-1.0.3.tgz"
-        }
+        "bn.js": "=5.2.1",
+        "bs58": "=5.0.0",
+        "buffer-compare": "=1.1.1",
+        "elliptic": "=6.5.4",
+        "inherits": "=2.0.4",
+        "lodash": "^4.17.21"
+      },
+      "devDependencies": {
+        "bitcore-build-zen": "HorizenOfficial/bitcore-build-zen#v0.5.5",
+        "brfs": "^1.2.0",
+        "chai": "^1.10.0",
+        "gulp": "^3.8.10",
+        "mocha": "^6.1.4",
+        "sinon": "^1.13.0"
       }
-    },
-    "inherits": {
-      "version": "2.0.1",
-      "from": "inherits@=2.0.1",
-      "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz"
-    },
-    "lodash": {
-      "version": "4.17.15",
-      "from": "lodash@=4.17.15",
-      "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.15.tgz"
     }
   }
 }
